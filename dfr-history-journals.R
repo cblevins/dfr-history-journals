@@ -8,15 +8,15 @@ library("ggplot2")
 library("lubridate")
 library("stringr")
 
-data_dir <- file.path(getwd(), "jah_data")
+data_dir <- file.path(getwd(), "jah_articles_1992-2012")
 metadata_file<-file.path(data_dir, "citations.tsv")
 meta<-read_dfr_metadata(metadata_file)
-counts <- read_wordcounts(list.files(file.path(data_dir, "wordcounts"), full.names=T))
-
+initial_data <- read_wordcounts(list.files(file.path(data_dir, "wordcounts"), full.names=T))
+counts<- initial_data
 #remove any short articles
-# counts <- counts %>%
-#   group_by(id) %>%
-#   filter(sum(weight) > 300)
+counts<-counts %>%
+  group_by(id) %>%
+  filter(sum(weight) > 200)
 
 #filter stopwords
 stoplist_file <- file.path(path.package("dfrtopics"), "stoplist", "stoplist.txt")
@@ -37,4 +37,21 @@ counts <- counts %>%
 
 #prep for MALLET so that there is only one document per row
 docs <- wordcounts_texts(counts)
+
+#get a MALLET-ready input
+ilist <- make_instances(docs)
+
+#run the topic model
+m <- train_model(ilist, n_topics=40,
+                 n_iters=300,
+                 seed=1066,       # "reproducibility"
+                 metadata=meta    # optional but handy later
+                 # many more parameters...
+)
+
+#write out results
+write_mallet_model(m, "modeling_results")
+
+
+
 

@@ -1,0 +1,9 @@
+Job Title: JAH_1992-2002
+Job ID: 2015.11.3.VghXMdu4
+Requester: cblevins
+Query: http://dfr.jstor.org/fsearch/submitrequest?cs=ty%3Afla%5E1.0%7Cjcode%3Ajamericanhistory%5E1.0%7Cyear%3A%5B1986+TO+2012%5D%5E1.0&fs=rtm1%3Ayrm1%3Atym1%3Asnm2&view=text&cc=year%3a[1992+TO+2012]^1.0
+View(s): citations|wordcounts
+Format: CSV
+Documents Requested: 1000
+Date Processed: 2015-11-03 13:05:07.432751
+
