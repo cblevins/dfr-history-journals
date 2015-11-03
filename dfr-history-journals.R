@@ -52,6 +52,28 @@ m <- train_model(ilist, n_topics=40,
 #write out results
 write_mallet_model(m, "modeling_results")
 
+#exploring the topic model results
+top_words(m, n=10) # n is the number of words to return for each topic
+topic_labels(m, n=8)
 
+#get top articles associated with a topic
+dd<- top_docs(m, n=3)
+ids <- doc_ids(m)[dd$doc[dd$topic == 21]]
+metadata(m) %>%
+  filter(id %in% ids) %>%
+  cite_articles()
 
+#Plotting topics
+srs <- topic_series(m, breaks="years")
+head(srs)
 
+top_words(m, n=10) %>%
+  plot_top_words(topic=21)
+
+topic_scaled_2d(m, n_words=2000) %>%
+  plot_topic_scaled(labels=topic_labels(m, n=3))
+
+theme_update(strip.text=element_text(size=7),  # optional graphics tweaking
+             axis.text=element_text(size=7))
+topic_series(m) %>%
+  plot_series(labels=topic_labels(m, 3))
