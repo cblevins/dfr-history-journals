@@ -1,0 +1,9 @@
+Job Title: RAH_Reviews_1992-2001
+Job ID: 2015.11.4.4WwbakcM
+Requester: cblevins
+Query: http://dfr.jstor.org/fsearch/submitrequest?cs=ty%3Abrv%5E1.0%7Cjcode%3Areviamerhist%5E1.0%7Cyear%3A%5B1992+TO+2002%5D%5E1.0&fs=rtm1%3Ayrm1%3Atym1%3Asnm2&view=text&cc=year%3a[1992+TO+2001]^1.0
+View(s): citations|wordcounts
+Format: CSV
+Documents Requested: 1000
+Date Processed: 2015-11-04 13:45:01.540701
+

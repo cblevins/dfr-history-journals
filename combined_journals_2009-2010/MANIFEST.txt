@@ -1,0 +1,9 @@
+Job Title: 2009-2010
+Job ID: 2015.11.9.DnSG424w
+Requester: cblevins
+Query: http://dfr.jstor.org/fsearch/submitrequest?cs=year%3A%5B2008+TO+2010%5D%5E1.0%7Cjcode%3A%28%22jamericanhistory%22+OR+%22amerhistrevi%22+OR+%22jeconomichistory%22+OR+%22econhistrevi%22+OR+%22compstudsocihist%22+OR+%22jintehist%22+OR+%22historytheory%22+OR+%22pastpresent%22+OR+%22historyteacher%22+OR+%22jworldhistory%22+OR+%22historicalj%22+OR+%22jsocialhistory%22+OR+%22busihistrevi%22%29%5E1.0%7Cty%3Afla%5E1.0&fs=yrm1%3Atym1%3Asnm1&view=text&cc=year%3a[2009+TO+2010]^1.0
+View(s): citations|wordcounts
+Format: CSV
+Documents Requested: 738
+Date Processed: 2015-11-09 13:08:01.912348
+
